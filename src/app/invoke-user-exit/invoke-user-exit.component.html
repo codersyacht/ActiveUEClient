@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <td>
+            <textarea [(ngModel)]="_inputData.inputPayload" rows="40" cols="70" ></textarea>
+        </td>
+        
+        <td>
+            <textarea [(ngModel)]="UEOutputData" rows="40" cols="70" ></textarea>
+        </td>
+       
+        <td>
+            <div *ngFor="let request of _activerequests">
+                <div (click)="httpRequestoRemoteServer(request)"  style="color: brown;cursor: pointer;">{{request}}</div>
+                </div>
+        </td>   
+    </tr>
+</table>
+<button (click)="findInputPayLoadbyRequestId('')">Click Here </button>
+<button (click)="Post_StoreOutputPayload()">Store Output </button>
+<button (click)="ActiveRequests()">Active Requests</button>
+
+
